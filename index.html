@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Formulario de Ingreso</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="form-container">
+        <h1>Formulario de Ingreso</h1>
+        <form id="dataForm" onsubmit="return false;">
+          <div class="form-group">
+            <label for="centroCosto">Centro de Costo:</label>
+            <input 
+              type="text" 
+              id="centroCosto" 
+              name="centroCosto" 
+              required
+              class="form-control"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="origenFondos">Origen de Fondos:</label>
+            <select 
+              id="origenFondos" 
+              name="origenFondos" 
+              required
+              class="form-control"
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="propio">Fondos Propios</option>
+              <option value="prestamo">Préstamo</option>
+              <option value="donacion">Donación</option>
+              <option value="gobierno">Fondos Gubernamentales</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="monto">Monto:</label>
+            <input 
+              type="number" 
+              id="monto" 
+              name="monto" 
+              required
+              min="0"
+              step="1"
+              class="form-control"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="proyecto">Proyecto:</label>
+            <input 
+              type="text" 
+              id="proyecto" 
+              name="proyecto" 
+              required
+              class="form-control"
+            >
+          </div>
+
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
